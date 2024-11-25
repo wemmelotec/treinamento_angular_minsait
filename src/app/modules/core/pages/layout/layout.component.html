@@ -1,0 +1,15 @@
+<div class="layout-wrapper">
+  <app-topbar></app-topbar>
+  <app-sidebar></app-sidebar>
+  <div
+    [ngClass]="{
+      'sidebar-opened': this.layoutService.menuToggle$ | async
+    }"
+    class="flex flex-column min-h-screen justify-content-between layout-content"
+  >
+    <div class="layout-content-main">
+      <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>
