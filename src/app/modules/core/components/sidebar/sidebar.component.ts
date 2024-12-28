@@ -7,13 +7,15 @@ import { MenuItem } from 'primeng/api';
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
+  // Aqui eu vou implementar a animação neste componente utilizando o Observable que foi injetado no
+  // construtor através do layoutService
   animations: [
     trigger('slide', [
       transition(':enter', [
-        style({ transform: 'translateX(-100%)' }),
+        style({ transform: 'translateX(-100%)' }), // estado inicial, na tela
         animate('100ms', style({ transform: 'translateX(0)' })),
       ]),
-      transition(':leave', [
+      transition(':leave', [ // vá pra fora da tela
         animate('100ms', style({ transform: 'translateX(-100%)' })),
       ]),
     ]),
@@ -42,5 +44,7 @@ export class SidebarComponent {
       ],
     },
   ];
-  constructor(public readonly layoutService: LayoutService) {}
+  constructor(public readonly layoutService: LayoutService) {} // Aqui fez a injeção do layoutService no construtor
 }
+
+// Para apresentar essa animação no html vai utilizar o slide no sidebar.component.html

@@ -1,6 +1,7 @@
 <div class="layout-wrapper">
   <app-topbar></app-topbar>
   <app-sidebar></app-sidebar>
+  <!-- Essa div representa o iframe central da minha página e também está ouvindo o layoutService-->
   <div
     [ngClass]="{
       'sidebar-opened': this.layoutService.menuToggle$ | async
@@ -8,6 +9,8 @@
     class="flex flex-column min-h-screen justify-content-between layout-content"
   >
     <div class="layout-content-main">
+  <!-- Como no app-routing foi indicado que o / é o layoutComponent, aqui no layout.component.html
+   também preciso do router-outlet-->
       <router-outlet></router-outlet>
     </div>
     <app-footer></app-footer>

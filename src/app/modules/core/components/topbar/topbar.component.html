@@ -1,17 +1,13 @@
+<!-- Todas são classes do primeFlex-->
 <div class="fixed h-5rem w-full topbar-style">
   <div class="h-full flex flex-row">
-    <div
-      class="flex justify-content-center align-items-center topbar-style-logo"
-    >
+    <div class="flex justify-content-center align-items-center topbar-style-logo">
       <img src="/assets/imgs/logo.png" alt="logo" class="w-8rem" />
     </div>
     <div class="flex align-items-center topbar-style-content">
-      <button
-        pButton
-        pRipple
-        (click)="this.layoutService.onMenuToggle()"
-        class="w-3rem h-3rem flex justify-content-center align-items-center button-menu"
-      >
+      <!-- Esse é o evento que vai modificar o comportamento do menu através do serviceLayout-->
+      <button pButton pRipple (click)="this.layoutService.onMenuToggle()"
+        class="w-3rem h-3rem flex justify-content-center align-items-center button-menu">
         <i class="pi pi-align-justify" style="font-size: 1.5rem"></i>
       </button>
     </div>

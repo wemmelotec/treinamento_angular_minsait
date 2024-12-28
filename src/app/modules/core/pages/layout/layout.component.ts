@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
+  // Também vai injetar o layoutService
   constructor(public readonly layoutService: LayoutService) {}
 }

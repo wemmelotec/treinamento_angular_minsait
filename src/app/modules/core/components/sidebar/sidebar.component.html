@@ -1,7 +1,9 @@
+<!-- Aqui eu fecho a comunicação fazendo o meu template ouvir o obsevable, ou seja, estou assinando o observable
+ através do pipe do próprio angular async -->
 <div
   [@slide]
   class="sidebar-style text-center fixed px-3"
-  *ngIf="this.layoutService.menuToggle$ | async"
->
+  *ngIf="this.layoutService.menuToggle$ | async">
+  <!-- Esse p-menu veio do primeNg e o Menu foi importado em nosso coreModule e no próprio sidebar.component.ts -->
   <p-menu [model]="items" styleClass="w-full h-full" />
 </div>
