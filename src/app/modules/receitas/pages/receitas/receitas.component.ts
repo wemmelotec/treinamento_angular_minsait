@@ -28,6 +28,10 @@ export class ReceitasComponent implements OnInit {
         this.loading$.next(false);
       })
     );
+
+    /**this.recipes$.subscribe(value =>{
+      console.log(value.recipes[0].)
+    })**/
   }
 
 }
